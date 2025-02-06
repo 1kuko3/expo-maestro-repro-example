@@ -1,0 +1,36 @@
+appId: com.jakubfromlugg.my-app
+---
+- launchApp
+- assertVisible: Enter first item
+- tapOn: Enter first item
+- inputText: First item
+- tapOn: Add
+- assertVisible: Enter second item
+- tapOn: Enter second item
+- inputText: Second item
+- tapOn: Add
+- assertVisible: Enter third item
+- tapOn: Enter third item
+- inputText: Third item
+- tapOn: Add
+- tapOn:
+    id: edit
+    index: 0
+- assertVisible: Update
+- tapOn:
+    text: First item
+- eraseText
+- inputText: Updated first item
+- tapOn: Update
+- assertVisible: .*Updated first item
+
+- tapOn:
+    id: edit
+    index: 2
+- assertVisible: Third item
+- tapOn:
+    text: Third item
+- eraseText
+- inputText: Updated third item
+- tapOn: Update
+- assertVisible: .*Updated third item
