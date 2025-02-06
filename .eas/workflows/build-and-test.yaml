@@ -1,0 +1,19 @@
+name: Build and test
+
+on:
+  push:
+    branches: ['*']
+
+jobs:
+  build:
+    type: build
+    params:
+      platform: ios
+      profile: build-and-maestro-test
+  e2e-test:
+    needs: [build]
+    name: Run E2E Tests
+    type: maestro
+    params:
+      build_id: ${{ needs.build.outputs.build_id }}
+      flow_path: ./.e2e/example-flow.yaml
