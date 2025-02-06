@@ -15,8 +15,7 @@
       },
       "ios": {
         "simulator": true,
-        "image": "latest",
-        "resourceClass": "large"
+        "image": "latest"
       }
     }
   }
