@@ -16,4 +16,4 @@ jobs:
     type: maestro
     params:
       build_id: ${{ needs.build.outputs.build_id }}
-      flow_path: ./maestro/example-flow.yaml
+      flow_path: ./maestro/example-flow.yml
