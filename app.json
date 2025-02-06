@@ -11,6 +11,9 @@
       "expo-router"
     ],
     "name": "my-app",
-    "slug": "my-app"
+    "slug": "my-app",
+    "ios": {
+      "bundleIdentifier": "com.jakubfromlugg.my-app"
+    }
   }
 }
