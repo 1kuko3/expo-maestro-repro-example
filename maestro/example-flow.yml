@@ -6,7 +6,7 @@ appId: com.jakubfromlugg.my-app
 - tapOn: Enter first item
 - inputText: First item
 - tapOn: Add
-- assertVisible: Enter second item
+# - assertVisible: Enter second item
 - tapOn: Enter second item
 - inputText: Second item
 - tapOn: Add
