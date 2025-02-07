@@ -14,6 +14,7 @@ jobs:
     needs: [build]
     name: Run E2E Tests
     type: maestro
+    image: latest
     params:
       build_id: ${{ needs.build.outputs.build_id }}
       flow_path: ./maestro/example-flow.yml
