@@ -1,8 +1,12 @@
 import { MaterialIcons } from '@/components/icons'
 
-import { ScrollView, View, Text, TextInput, Button, Pressable } from 'react-native'
+import { ScrollView, View, Text, Button, Pressable } from 'react-native'
 import { GestureHandlerRootView } from 'react-native-gesture-handler'
-import BottomSheet, { BottomSheetModalProvider, BottomSheetView } from '@gorhom/bottom-sheet'
+import BottomSheet, {
+  BottomSheetModalProvider,
+  BottomSheetTextInput,
+  BottomSheetView,
+} from '@gorhom/bottom-sheet'
 import React from 'react'
 
 export default function Home() {
@@ -72,7 +76,7 @@ export default function Home() {
         <BottomSheetModalProvider>
           <BottomSheet ref={bottomSheet1} accessible={false}>
             <BottomSheetView className="flex-1 p-6 items-center">
-              <TextInput
+              <BottomSheetTextInput
                 placeholder="Enter first item"
                 value={firstItem}
                 onChangeText={setFirstItem}
@@ -98,7 +102,7 @@ export default function Home() {
           </BottomSheet>
           <BottomSheet index={-1} ref={bottomSheet2} accessible={false}>
             <BottomSheetView className="flex-1 p-6 items-center">
-              <TextInput
+              <BottomSheetTextInput
                 placeholder="Enter second item"
                 value={secondItem}
                 onChangeText={setSecondItem}
@@ -124,7 +128,7 @@ export default function Home() {
           </BottomSheet>
           <BottomSheet index={-1} ref={bottomSheet3} accessible={false}>
             <BottomSheetView className="flex-1 p-6 items-center">
-              <TextInput
+              <BottomSheetTextInput
                 placeholder="Enter third item"
                 value={thirdItem}
                 onChangeText={setThirdItem}
