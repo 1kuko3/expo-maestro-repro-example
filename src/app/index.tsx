@@ -1,6 +1,6 @@
 import { MaterialIcons } from '@/components/icons'
 
-import { ScrollView, View, Text, Button, Pressable } from 'react-native'
+import { ScrollView, View, Text, Button, Pressable, Keyboard } from 'react-native'
 import { GestureHandlerRootView } from 'react-native-gesture-handler'
 import BottomSheet, {
   BottomSheetModalProvider,
@@ -89,6 +89,7 @@ export default function Home() {
                   onPress={() => {
                     if (firstItem === '') return
                     bottomSheet1.current?.close()
+                    Keyboard.dismiss()
                     if (editIndex === 0) {
                       setItems(items.map((item, index) => (index === 0 ? firstItem : item)))
                     } else {
@@ -115,6 +116,7 @@ export default function Home() {
                   onPress={() => {
                     if (secondItem === '') return
                     bottomSheet2.current?.close()
+                    Keyboard.dismiss()
                     if (editIndex === 1) {
                       setItems(items.map((item, index) => (index === 1 ? secondItem : item)))
                     } else {
@@ -141,6 +143,7 @@ export default function Home() {
                   onPress={() => {
                     if (thirdItem === '') return
                     bottomSheet3.current?.close()
+                    Keyboard.dismiss()
                     if (editIndex === 2) {
                       setItems(items.map((item, index) => (index === 2 ? thirdItem : item)))
                     } else {

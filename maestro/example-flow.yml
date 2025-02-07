@@ -1,6 +1,7 @@
 appId: com.jakubfromlugg.my-app
 ---
-- launchApp
+- launchApp:
+    clearState: true
 - assertVisible: Enter first item
 - tapOn: Enter first item
 - inputText: First item
