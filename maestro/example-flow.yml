@@ -4,9 +4,11 @@ appId: com.jakubfromlugg.my-app
     clearState: true
 - assertVisible: Enter first item
 - tapOn: Enter first item
+- takeScreenshot: before-enter-first-item
 - inputText: First item
 - tapOn: Add
-# - assertVisible: Enter second item
+- takeScreenshot: after-add-first-item
+- assertVisible: Enter second item
 - tapOn: Enter second item
 - inputText: Second item
 - tapOn: Add
